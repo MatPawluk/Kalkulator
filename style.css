@@ -1,0 +1,152 @@
+/* Ogólny wygląd strony */
+body {
+	margin: 0;
+	font-family: 'Arial', sans-serif;
+	background-color: #f4f4f4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* Kontener główny */
+.parent {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(6, 80px);
+	grid-gap: 10px;
+	min-width: 320px;
+	max-width: 320px;
+	width: 100%;
+	background-color: #2c2c2c;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Wyświetlacz */
+#display {
+	position: relative;
+	grid-column: 1 / -1;
+	background-color: #222;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	color: #fff;
+	font-size: 2.5rem;
+	text-align: right;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Wyrażenie */
+#expression {
+	font-size: 12px; /* Mniejsza czcionka dla wyrażenia */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: absolute;
+	top: 0;
+	left: 0;
+    padding: 8px;
+    background:none ;
+}
+
+/* Bieżąca wartość */
+#currentInput {
+	font-size: 36px; /* Większa czcionka dla wyniku */
+	margin-top: 20px;
+    background:none ;
+}
+
+#display, #expression, #currentInput {
+    cursor: default; /* Zmieniamy kursor na domyślny */
+}
+
+#display:hover, #expression:hover, #currentInput:hover {
+    background-color: none; 
+    cursor: default;
+    transform: scale(1);
+}
+
+/* Ogólny styl przycisków */
+.parent div {
+	background-color: #333;
+	color: #fff;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Efekty hover */
+.parent div:hover {
+	background-color: #555;
+	transform: scale(1.05);
+	box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3);
+}
+
+#display {
+	transform: scale(1);
+	cursor: auto;
+}
+
+/* Styl dla przycisku 'C' */
+#clear {
+	background-color: #e74c3c;
+	color: #fff;
+}
+
+#clear:hover {
+	background-color: #c0392b;
+}
+
+/* Styl przycisków operatorów */
+#add,
+#subtract,
+#multiply,
+#divide {
+	background-color: #f39c12;
+}
+
+#add:hover,
+#subtract:hover,
+#multiply:hover,
+#divide:hover {
+	background-color: #e67e22;
+}
+
+/* Styl przycisku "=" */
+#equals {
+	background-color: #27ae60;
+	color: #fff;
+	grid-column: span 3;
+}
+
+#equals:hover {
+	background-color: #2ecc71;
+}
+
+/* Dodatkowe stylizacje przycisków */
+#decimal,
+#zero {
+	background-color: #333;
+}
+
+#zero {
+	grid-column: span 2;
+}
+
+/* Środkowanie całego kontenera */
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
