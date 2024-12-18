@@ -50,29 +50,33 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-    padding: 8px;
-    background:none ;
+	padding: 8px;
+	background: none;
 }
 
 /* Bieżąca wartość */
 #currentInput {
 	font-size: 36px; /* Większa czcionka dla wyniku */
 	margin-top: 20px;
-    background:none ;
+	background: none;
 }
 
-#display, #expression, #currentInput {
-    cursor: default; /* Zmieniamy kursor na domyślny */
+#display,
+#expression,
+#currentInput {
+	cursor: default; /* Zmieniamy kursor na domyślny */
 }
 
-#display:hover, #expression:hover, #currentInput:hover {
-    background-color: none; 
-    cursor: default;
-    transform: scale(1);
+#display:hover,
+#expression:hover,
+#currentInput:hover {
+	background-color: none;
+	cursor: default;
+	transform: scale(1);
 }
 
 /* Ogólny styl przycisków */
-.parent div {
+.button {
 	background-color: #333;
 	color: #fff;
 	font-size: 1.5rem;
@@ -86,60 +90,56 @@ body {
 }
 
 /* Efekty hover */
-.parent div:hover {
+.button:hover {
 	background-color: #555;
 	transform: scale(1.05);
 	box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3);
 }
 
-#display {
-	transform: scale(1);
-	cursor: auto;
-}
 
 /* Styl dla przycisku 'C' */
-#clear {
+.clear {
 	background-color: #e74c3c;
 	color: #fff;
 }
 
-#clear:hover {
+.clear:hover {
 	background-color: #c0392b;
 }
 
 /* Styl przycisków operatorów */
-#add,
-#subtract,
-#multiply,
-#divide {
+.add,
+.subtract,
+.multiply,
+.divide {
 	background-color: #f39c12;
 }
 
-#add:hover,
-#subtract:hover,
-#multiply:hover,
-#divide:hover {
+.add:hover,
+.subtract:hover,
+.multiply:hover,
+.divide:hover {
 	background-color: #e67e22;
 }
 
 /* Styl przycisku "=" */
-#equals {
+.equals {
 	background-color: #27ae60;
 	color: #fff;
 	grid-column: span 3;
 }
 
-#equals:hover {
+.equals:hover {
 	background-color: #2ecc71;
 }
 
 /* Dodatkowe stylizacje przycisków */
-#decimal,
-#zero {
+.decimal,
+.zero {
 	background-color: #333;
 }
 
-#zero {
+.zero {
 	grid-column: span 2;
 }
 

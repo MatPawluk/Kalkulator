@@ -1,7 +1,7 @@
 const display = document.getElementById('display');
 const expressionDisplay = document.getElementById('expression');
 const currentInputDisplay = document.getElementById('currentInput');
-const buttons = document.querySelectorAll('.parent div');
+const buttons = document.querySelectorAll('.button');
 
 let currentInput = '';
 let previousInput = '';
