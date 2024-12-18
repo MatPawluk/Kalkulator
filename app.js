@@ -2,6 +2,8 @@ const display = document.getElementById('display');
 const expressionDisplay = document.getElementById('expression');
 const currentInputDisplay = document.getElementById('currentInput');
 const buttons = document.querySelectorAll('.button');
+const clickSound = document.getElementById('click-sound');
+
 
 let currentInput = '';
 let previousInput = '';
@@ -31,6 +33,15 @@ function updateDisplay() {
 
 	currentInputDisplay.textContent = displayValue;
 }
+
+function playClickSound() {
+    clickSound.currentTime = 0; 
+    clickSound.play(); 
+}
+
+buttons.forEach(button => {
+    button.addEventListener('click', playClickSound);
+});
 
 buttons.forEach(button => {
 	button.addEventListener('click', () => {
