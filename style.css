@@ -9,7 +9,6 @@ body {
 	height: 100vh;
 }
 
-/* Kontener główny */
 .parent {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -24,8 +23,7 @@ body {
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Wyświetlacz */
-#display {
+.display {
 	position: relative;
 	grid-column: 1 / -1;
 	background-color: #222;
@@ -42,7 +40,7 @@ body {
 }
 
 /* Wyrażenie */
-#expression {
+.expression {
 	font-size: 12px; /* Mniejsza czcionka dla wyrażenia */
 	white-space: nowrap;
 	overflow: hidden;
@@ -55,27 +53,26 @@ body {
 }
 
 /* Bieżąca wartość */
-#currentInput {
+.currentInput {
 	font-size: 36px; /* Większa czcionka dla wyniku */
 	margin-top: 20px;
 	background: none;
 }
 
-#display,
-#expression,
-#currentInput {
-	cursor: default; /* Zmieniamy kursor na domyślny */
+.display,
+.expression,
+.currentInput {
+	cursor: default; 
 }
 
-#display:hover,
-#expression:hover,
-#currentInput:hover {
+.display:hover,
+.expression:hover,
+.currentInput:hover {
 	background-color: none;
 	cursor: default;
 	transform: scale(1);
 }
 
-/* Ogólny styl przycisków */
 .button {
 	background-color: #333;
 	color: #fff;
@@ -89,15 +86,17 @@ body {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Efekty hover */
 .button:hover {
 	background-color: #555;
 	transform: scale(1.05);
 	box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3);
 }
 
+.button:active {
+    transform: scale(1);
+}
 
-/* Styl dla przycisku 'C' */
+
 .clear {
 	background-color: #e74c3c;
 	color: #fff;
@@ -107,7 +106,6 @@ body {
 	background-color: #c0392b;
 }
 
-/* Styl przycisków operatorów */
 .add,
 .subtract,
 .multiply,
@@ -122,7 +120,6 @@ body {
 	background-color: #e67e22;
 }
 
-/* Styl przycisku "=" */
 .equals {
 	background-color: #27ae60;
 	color: #fff;
@@ -133,7 +130,6 @@ body {
 	background-color: #2ecc71;
 }
 
-/* Dodatkowe stylizacje przycisków */
 .decimal,
 .zero {
 	background-color: #333;
@@ -143,7 +139,6 @@ body {
 	grid-column: span 2;
 }
 
-/* Środkowanie całego kontenera */
 main {
 	display: flex;
 	justify-content: center;
